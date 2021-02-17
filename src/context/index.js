@@ -26,7 +26,7 @@ class AppProvider extends Component {
     }
 
     nextHandler = () => {
-        const { players } = this.state
+        const { players } = this.state;
         if(players.length < 2) {
             toast.error("You need more than one player", {
                 position: toast.POSITION.TOP_LEFT,
@@ -35,8 +35,19 @@ class AppProvider extends Component {
         } else {
             this.setState({
                 stage: 2
+             },()=> {
+                 setTimeout(() => {
+                    this.generatePayer()
+                 }, 2000)
              })
         }
+    }
+
+    generatePayer = () => {
+        const { players } = this.state;
+        this.setState({
+            result: players[Math.floor(Math.random() * players.length)]
+        })
     }
 
 

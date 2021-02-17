@@ -10,10 +10,10 @@ const Stage2 = () => {
         <div>{context.state.result}</div>
       </div>
       <div className="action_button">
-        Retry...
+        Get a new payer
       </div>
       <div className="action_button btn_2">
-        Get a new payer
+        Retry..
       </div>
     </>
   );
