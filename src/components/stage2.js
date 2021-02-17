@@ -9,10 +9,16 @@ const Stage2 = () => {
         <h3>The Payer is: </h3>
         <div>{context.state.result}</div>
       </div>
-      <div className="action_button">
-        Get a new payer
+      <div 
+        className="action_button" 
+        onClick={()=>context.resetPayer()}
+      >
+        Reset Game
       </div>
-      <div className="action_button btn_2" onClick={() => context.getNewPayer()}>
+      <div 
+        className="action_button btn_2" 
+        onClick={() => context.getNewPayer()}
+      >
         Retry..
       </div>
     </>

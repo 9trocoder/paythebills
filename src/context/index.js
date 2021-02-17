@@ -50,6 +50,14 @@ class AppProvider extends Component {
         })
     }
 
+    resetPayerHandler = () => {
+        this.setState({
+            stage: 1,
+            players: [],
+            result: ''
+        })
+    }
+
 
     render() {
         
@@ -60,7 +68,8 @@ class AppProvider extends Component {
                     addPlayer: this.addPlayerHandler,
                     removePlayer: this.removePlayerHandler,
                     next: this.nextHandler,
-                    getNewPayer: this.generatePayer
+                    getNewPayer: this.generatePayer,
+                    restPayer: this.resetPayerHandler
                 }}>
                     {this.props.children}
                 </AppContext.Provider>
