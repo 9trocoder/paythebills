@@ -12,7 +12,7 @@ const Stage2 = () => {
       <div className="action_button">
         Get a new payer
       </div>
-      <div className="action_button btn_2">
+      <div className="action_button btn_2" onClick={() => context.getNewPayer()}>
         Retry..
       </div>
     </>

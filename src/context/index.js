@@ -59,7 +59,8 @@ class AppProvider extends Component {
                     state: this.state,
                     addPlayer: this.addPlayerHandler,
                     removePlayer: this.removePlayerHandler,
-                    next: this.nextHandler
+                    next: this.nextHandler,
+                    getNewPayer: this.generatePayer
                 }}>
                     {this.props.children}
                 </AppContext.Provider>
