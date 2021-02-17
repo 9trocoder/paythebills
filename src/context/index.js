@@ -33,7 +33,9 @@ class AppProvider extends Component {
                 autoClose: 2000
             })
         } else {
-            console.log('move to stage 2')
+            this.setState({
+                stage: 2
+             })
         }
     }
 

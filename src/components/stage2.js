@@ -7,7 +7,13 @@ const Stage2 = () => {
     <>
       <div className="result_wrapper">
         <h3>The Payer is: </h3>
-        <div>THE PAYER</div>
+        <div>{context.state.result}</div>
+      </div>
+      <div className="action_button">
+        Retry...
+      </div>
+      <div className="action_button btn_2">
+        Get a new payer
       </div>
     </>
   );
