@@ -9,12 +9,22 @@ class AppProvider extends Component {
         result: ''
     }
 
+    addPlayerHandler = (name) => {
+        this.setState((prevState) => ({
+            players: [
+                ...prevState.players,
+                name
+            ]
+        }))
+    }
+
 
     render() {
         
         return (
             <AppContext.Provider value={{
-                state: this.state
+                state: this.state,
+                addPlayer: this.addPlayerHandler
             }}>
                 {this.props.children}
             </AppContext.Provider>

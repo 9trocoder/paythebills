@@ -14,7 +14,9 @@ const Stage1 = () => {
 
     if(validate) {
       // form is valid ..add player
-      setError([false, ''])
+      setError([false, '']);
+      context.addPlayer(value)
+      textInput.current.value = ''
     }
   }
 
@@ -29,6 +31,8 @@ const Stage1 = () => {
     }
     return true;
   }
+
+  console.log(context)
 
   return (
     <>
