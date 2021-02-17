@@ -52,6 +52,13 @@ const Stage1 = () => {
         <Button className="miami" variant="primary" type="submit">
           Add player
         </Button>
+        {
+          context.state.players && context.state.players.length > 0 ?
+           <>
+           
+           </>
+          : null
+        }
       </Form>
     </>
   );
